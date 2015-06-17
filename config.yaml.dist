@@ -1,0 +1,2 @@
+vagrant-config:
+  puppet_repo_dir: < ABSOULTE PATH THE PUG-PUPPET-REPO ON YOUR SYSTEM >
