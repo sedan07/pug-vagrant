@@ -2,7 +2,7 @@
 
 Vagrant boxes (using Docker containers) for Puppet Trusted Facts demo
 
-**Important:** You need to clone the `pug-puppet` repo to some where on your machine first!
+**Important:** You need to clone the [pug-puppet](https://github.com/sedan07/pug-puppet) repo to some where on your machine first!
 
 ## Usage
 
@@ -26,3 +26,16 @@ Instead of SSH'ing into them you simply use the `docker exec` command, like so:
 ```
 docker exec -it pug-web-https /bin/bash
 ```
+
+The two web nodes automatically know the IP of the Puppet Master so you can simply run:
+
+```
+puppet agent -t
+```
+
+to kick off a Puppet run and experiment from there
+
+## Port forwarding
+
+http://localhost:80/ should point at the pug-web-http server
+https://localhost:443/ should point at the pug-web-https server
